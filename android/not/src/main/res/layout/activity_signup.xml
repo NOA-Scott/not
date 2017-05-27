@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import
+            alias="Handler"
+            type="com.noa.iot.android.viewmodel.login.signup.SignUpViewModel.Handler" />
+
+        <variable
+            name="handler"
+            type="Handler" />
+
+        <import
+            alias="User"
+            type="com.noa.iot.android.model.User" />
+
+        <variable
+            name="user"
+            type="User" />
+
+        <import
+            type="android.view.View" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@id/username"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_text_height"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/text_border_selector"
+            android:paddingLeft="@dimen/activity_text_padding"
+            android:paddingRight="@dimen/activity_text_padding"
+            android:layout_marginRight="20dp"
+            android:visibility="@{user.code?View.GONE:View.VISIBLE}"
+            android:layout_marginTop="10dp"
+            android:hint="@string/UserName"
+            android:text="@{user.username}" />
+
+        <EditText
+            android:id="@id/email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_text_height"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/text_border_selector"
+            android:paddingLeft="@dimen/activity_text_padding"
+            android:paddingRight="@dimen/activity_text_padding"
+            android:layout_marginRight="20dp"
+            android:visibility="@{user.code?View.GONE:View.VISIBLE}"
+            android:layout_marginTop="10dp"
+            android:hint="@string/Email"
+            android:text="@{user.email}" />
+
+        <EditText
+            android:id="@id/password"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_height="@dimen/activity_text_height"
+            android:background="@drawable/text_border_selector"
+            android:paddingLeft="@dimen/activity_text_padding"
+            android:paddingRight="@dimen/activity_text_padding"
+            android:visibility="@{user.code?View.GONE:View.VISIBLE}"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/Password"
+            android:text="@{user.password}" />
+
+        <EditText
+            android:id="@id/phone"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_height="@dimen/activity_text_height"
+            android:background="@drawable/text_border_selector"
+            android:paddingLeft="@dimen/activity_text_padding"
+            android:paddingRight="@dimen/activity_text_padding"
+            android:visibility="@{user.code?View.GONE:View.VISIBLE}"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/Phone"
+            android:text="@{user.phone}" />
+
+        <Button
+            android:id="@id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:visibility="@{user.code?View.GONE:View.VISIBLE}"
+            android:background="@drawable/btn_bg"
+            android:enabled="@{user.enable}"
+            android:onClick="@{handler.onClick}"
+            android:text="@string/SignUp"
+            android:textAllCaps="false" />
+
+        <EditText
+            android:id="@id/code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_text_height"
+            android:background="@drawable/text_border_selector"
+            android:paddingLeft="@dimen/activity_text_padding"
+            android:paddingRight="@dimen/activity_text_padding"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="@{user.code?View.VISIBLE:View.GONE}"
+            android:layout_marginTop="10dp"
+            android:hint="@string/VerificationCode"
+            android:text="@{user.password}" />
+
+        <Button
+            android:id="@id/config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:visibility="@{user.code?View.VISIBLE:View.GONE}"
+            android:background="@drawable/btn_bg"
+            android:enabled="@{user.enable}"
+            android:onClick="@{handler.onClick}"
+            android:text="@string/Config"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</layout>

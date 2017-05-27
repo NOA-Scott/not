@@ -1,0 +1,28 @@
+<resources>
+    <string name="cognito_pool_id">us-east-1_qUqOOhBLg</string>
+
+    <string name="SmartHome">Smart Home</string>
+    <string name="app_name">NOT</string>
+    <string name="Copyright">Copyright (c) 2017 NOA Labs. All rights reserved.</string>
+
+    <string name="SignUp">Sign Up</string>
+    <string name="ResetPassword">Reset Password</string>
+    <string name="SignIn">Sign In</string>
+    <string name="Email">Email</string>
+    <string name="UserName">UserName</string>
+    <string name="Password">Password</string>
+    <string name="Phone">Phone</string>
+    <string name="VerificationCode">Verification Code</string>
+    <string name="Config">Config</string>
+    <string name="ConfirmCode">Confirm Code</string>
+
+
+    <string name="VerCode">Verification code</string>
+    <string name="ResendCode">Resend code</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

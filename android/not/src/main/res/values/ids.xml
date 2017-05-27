@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="signup" type="id"/>
+    <item name="signin" type="id"/>
+    <item name="resetpass" type="id"/>
+    <item name="email" type="id"/>
+    <item name="username" type="id"/>
+    <item name="password" type="id"/>
+    <item name="phone" type="id"/>
+    <item name="code" type="id"/>
+    <item name="config" type="id"/>
+    <item name="cfgcode" type="id"/>
+    <item name="viewpager" type="id"/>
+
+    <item name="devices" type="id"/>
+    <item name="groups" type="id"/>
+    <item name="settings" type="id"/>
+    <item name="icon" type="id"/>
+    <item name="name" type="id"/>
+    <item name="type" type="id"/>
+    <item name="group" type="id"/>
+</resources>
